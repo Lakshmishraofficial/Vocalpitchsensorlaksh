@@ -1,0 +1,307 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: fixed;
+  font-family: sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  width: 100%;
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  cursor: default;
+  user-select: none;
+  background-size: cover;
+}
+
+.notes {
+  margin: auto;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.note {
+  font-size: 90px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.note.active {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #00ffae;
+  font-size: 130px
+  /* background: -webkit-linear-gradient(rgba(255, 255, 255, 7.9), rgb(2, 24, 170));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.notes-list {
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  
+  -webkit-linear-gradient:(270deg, #000000, rgb(255, 255, 255), #000000)
+}
+
+.notes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.note {
+  -webkit-tap-highlight-color: transparent;
+  background: -webkit-linear-gradient(rgba(159, 159, 159, 0.284), rgb(21, 72, 61));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.note span {
+  position: absolute;
+  right: 0.25em;
+  font-size: 40%;
+  font-weight: normal;
+}
+
+.note-sharp {
+  top: 0.3em;
+}
+
+.note-octave {
+  bottom: 0.3em;
+}
+.frequency-bars{
+  height:70vh
+}
+#innerSa{
+  width:100%;
+  display: block;
+}
+.frequency {
+  font-size: 32px;
+  color: #2c3e50
+}
+.containers{
+ margin-top: 2vh;
+ cursor: pointer;
+  border-radius: 100px;
+  background-color: #1f4195;
+  color: #ffffff;
+  font-size: 1.3em;
+  z-index: 999;
+  font-weight: 600;
+  height: 55px;
+  border-color: transparent;
+  width: 160px;
+  outline: none;
+  border-radius: 50px;
+}
+.frequency span {
+  font-size: 50%;
+  margin-left: 0.25em;
+}
+
+.meter {
+  position: fixed;
+  /* display: none; */
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  width: 400px;
+  height: 33%;
+  margin: 0 auto 5vh auto;
+}
+
+.meter-pointer {
+  width: 2px;
+  height: 100%;
+  background: #2c3e50;
+  transform: rotate(45deg);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-dot {
+  width: 10px;
+  height: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  margin-right: -4px;
+}
+
+.meter-scale {
+  width: 2px;
+  height: 100%;
+  transform-origin: bottom;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+  border-top: 10px solid;
+  position: absolute;
+  color: #2c3e50;
+  right: 50%;
+}
+
+.meter-scale-strong {
+  width: 5px;
+  border-top-width: 20px;
+}
+
+.frequency-bars {
+  position: fixed;
+  bottom: 0;
+}
+@media (max-height: 600px) {
+  .containers{
+    margin-left: 60%;
+  }
+}
+@media (min-width: 1300px) {
+  .closeIcon{
+    margin-bottom: 20% !important;
+  }
+}
+@media (max-width: 1400px) {.instructionhelp{width: 100% !important;}.sasetter{
+  font-size:25px !important;
+  border-radius: 0px!important;
+  width: 60px !important;
+ }}
+ @media (max-width: 422px){  .closeIcon{
+  margin-bottom: 182% !important;
+}}
+@media (max-width: 768px) {
+  .meter {
+    width: 100%;
+  }
+
+ .sasetter{
+  font-size:35px !important;
+  border-radius: 0px!important;
+  width: 100px !important;
+ }
+ .instructionhelp{
+  flex-direction: column !important;
+  width: 90% !important;
+  height: 90% !important;
+  top: 10 !important;
+  border-radius: 0px!important;
+ }
+  .notes {
+    width: 100%;
+  }
+  .note{
+    font-size: 45px;
+  }
+}
+
+.-button {
+  background: #2c3e50;
+}
+.instructionhelp{
+  position: fixed;
+  align-self: center;
+  justify-content: space-evenly;
+  top: 10vh;
+  visibility: hidden;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  background-image:linear-gradient(346deg, #98beff, #bffaff2e);
+  color: #ffffff;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius: 100px;
+height: 80%;
+align-items: center;
+ 
+}
+.a4
+.instructionhelp .a4
+/* .a4 {
+  position: absolute;
+  
+  top: 5vh;
+  font-size: 51px;
+  left: 60vw;
+  align-items: center;
+  justify-content: initial;
+}
+.a5 {
+  position: absolute;
+  
+  top: 25vh;
+  font-size: 51px;
+  left: 60vw;
+  align-items: center;
+  justify-content: initial;
+}
+.a5 span {
+  color:white;
+    width: 60%;
+    display: flex;
+    height: 100%;
+    font-size: 33px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 20px;
+} */
+
+.sasetter{
+  width: 100px !important;
+  display: contents;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 10px;
+  min-height: 36px;
+  min-width: 36px;
+  color: #ffffff;
+  background: white;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: '4px';
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+
+
+
+}
+.sasetter:hover {
+  background-color: #14a17d;
+  color: #ffffffbc;
+  font-size: '24px';
+  
+}
+
+/* .a4 span {
+  color:white;
+    width: 60%;
+    display: flex;
+    height: 100%;
+    font-size: 33px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 20px;
+} */
+
+.auto {
+  position: absolute;
+  display: none;
+  top: 16px;
+  right: 16px;
+}
